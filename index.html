@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Abbas Ahmed Syed Khaja | Math Tutoring Classes | IIT Madras Ph.D</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #dc2626;
+            --gold: #f59e0b;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .mobile-menu {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+            color: var(--white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .teacher-info {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .teacher-info h3 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .qualifications {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #25D366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* Feature Boxes */
+        .feature-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Syllabus Section */
+        .syllabus-container {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .syllabus-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .syllabus-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .syllabus-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .syllabus-item ul {
+            margin-left: 1.5rem;
+        }
+        
+        .syllabus-item li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        /* Images */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .image-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .image-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Lists */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .styled-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .styled-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Table Styles */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .info-table th,
+        .info-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .info-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .info-table tr:hover {
+            background: #f9fafb;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 4rem 5%;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 2rem 5%;
+            }
+            
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            nav, .contact-section, footer {
+                display: none;
+            }
+            
+            .hero {
+                margin-top: 0;
+                background: white;
+                color: black;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                📚 Math Excellence
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#syllabus">Syllabus</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">Eight Month Course | From Basics to 10th Grade</div>
+            <h1>Math Tutoring Classes</h1>
+            <p class="subtitle">Revolutionize Your Math Learning Experience</p>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
+                Interactive conceptual classes covering the entire spectrum from basic addition to 10th-grade math. 
+                On-demand classes for 11th and 12th Grade also available.
+            </p>
+            
+            <div class="teacher-info">
+                <h3>Dr. Abbas Ahmed Syed Khaja</h3>
+                <div class="qualifications">
+                    <strong>Experience:</strong> 18+ Years of Teaching<br>
+                    <strong>Qualifications:</strong> B.E (India), M.E (India), MS (Germany), Ph.D (IIT Madras, India)
+                </div>
+                <a href="https://wa.me/918124185476" class="whatsapp-btn">
+                    <span>💬</span> WhatsApp: +91 81241 85476
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section id="about">
+        <h2 class="section-title">Introduction</h2>
+        <div class="card">
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                Every Indian student dreams of studying at IITs, with top IIT JEE graduates aiming for MIT, Oxford, Cambridge, or Stanford. 
+                Many IIT alumni further their studies by pursuing Masters at these prestigious universities, showcasing the quality of education in the West. 
+                The research facilities and infrastructure at these institutions provide an ideal environment for academic success.
+            </p>
+            <div class="highlight-box">
+                <h4>Direct Path to Success</h4>
+                <p>Instead of the longer route of clearing IIT JEE, completing a Bachelor of Engineering, and then pursuing a Masters in the West, 
+                a more direct path is excelling in IGCSE/AS/A levels for admission in the top universities at bachelors level. 
+                With increasing wealth among Indians, there is a growing opportunity to invest in children's education for placements in the world's top universities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview & Purpose -->
+    <section style="background: white;">
+        <h2 class="section-title">Overview & Purpose</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>🎯 Course Structure</h3>
+                <ul class="styled-list">
+                    <li>5 days a week classes</li>
+                    <li>1 hour per session</li>
+                    <li>8 months duration</li>
+                    <li>From basic addition to 10th-grade math</li>
+                    <li>Comprehensive curriculum coverage</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🚀 Learning Outcomes</h3>
+                <ul class="styled-list">
+                    <li>Thorough understanding of mathematical concepts</li>
+                    <li>Strong foundation for success</li>
+                    <li>Transformative learning journey</li>
+                    <li>Math mastered with confidence</li>
+                    <li>Preparation for global examinations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives -->
+    <section>
+        <h2 class="section-title">Objectives</h2>
+        <div class="grid-2">
+            <div class="feature-box">
+                <div class="feature-icon">🌍</div>
+                <h3>Global Examination Readiness</h3>
+                <p>Upon successfully completing the course, students will be well-equipped to excel in any 10th-grade examinations globally, including those conducted by renowned boards such as:</p>
+                <ul style="text-align: left; margin-top: 1rem; font-size: 0.9rem;">
+                    <li>CAMBRIDGE BOARD (UK)</li>
+                    <li>IGCSE (UK)</li>
+                    <li>AQA (UK), OCR (UK)</li>
+                    <li>ICSE (Indian), CBSE (Indian)</li>
+                    <li>German Boards and more</li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🇺🇸</div>
+                <h3>USA Examination Preparation</h3>
+                <p>The comprehensive coverage of topics not only meets international exam standards but also aligns with USA examinations:</p>
+                <ul style="text-align: left; margin-top: 1rem; font-size: 0.9rem;">
+                    <li>SAT Preparation</li>
+                    <li>ACT Preparation</li>
+                    <li>Additional preparation provided</li>
+                    <li>Enhanced performance strategies</li>
+                    <li>High score achievement focus</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Photos -->
+    <section style="background: white;">
+        <h2 class="section-title">Online Teaching Environment</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #666;">Interactive virtual classrooms with personalized attention</p>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Online Math Teaching">
+                <div class="image-caption">Interactive Online Sessions</div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Virtual Classroom">
+                <div class="image-caption">One-on-One Attention</div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Math Problem Solving">
+                <div class="image-caption">Problem Solving Sessions</div>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Student Learning">
+                <div class="image-caption">Engaged Student Learning</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment & Standards -->
+    <section>
+        <h2 class="section-title">Assessment & Education Standards</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>📊 Continuous Assessment</h3>
+                <ul class="styled-list">
+                    <li>Regular assessment and ongoing improvement</li>
+                    <li>Evaluation based on homework completion</li>
+                    <li>Timely updates to parents on performance</li>
+                    <li>Examinations after each chapter completion</li>
+                    <li>Independent performance assessment encouraged</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🎓 Education Standards</h3>
+                <ul class="styled-list">
+                    <li>Integrated quality education standards (IAEA - International Association for Education Assessment)</li>
+                    <li>European nations education standards</li>
+                    <li>Lean Six Sigma Principle:
+                        <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Teach</li>
+                            <li>Continuous Assessment</li>
+                            <li>Adapt to student intellect</li>
+                            <li>Test</li>
+                            <li>Improve</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Plan -->
+    <section style="background: white;">
+        <h2 class="section-title">Strategic Study Plan</h2>
+        <div class="card">
+            <p style="margin-bottom: 1.5rem;">The approach to learning should align with the individual's objectives, considering factors like future profession or preferred top university and its admission criteria.</p>
+            
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Subject</th>
+                        <th>Duration/Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>Mathematics</td>
+                        <td>8 months, then take exam</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>Chemistry</td>
+                        <td>After math foundation (ratios/proportions)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>Biology</td>
+                        <td>Next examination series</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>Physics</td>
+                        <td>After math completion</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 5</strong></td>
+                        <td>English</td>
+                        <td>Based on proficiency</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 6</strong></td>
+                        <td>Economics/Accounts/Finance</td>
+                        <td>After IGCSE math (requires statistics & probability)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="highlight-box">
+                <h4>Important Notes</h4>
+                <ul style="margin-left: 1.5rem;">
+                    <li>UK Boards exams conducted three times a year</li>
+                    <li>Students can register as private candidates</li>
+                    <li>Home schooling options available</li>
+                    <li>Optimal starting age: 12-13 years (7th, 8th, or 9th grade)</li>
+                    <li>No age limit for UK secondary examinations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Psychological Aspect -->
+    <section>
+        <h2 class="section-title">Psychological Approach</h2>
+        <div class="card">
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                Students inherently possess the ability to learn quickly, particularly in subjects like Math, Physics, Chemistry, and Biology. 
+                The knowledge accumulated over a 10-year period can be condensed into one or two years for slower learners, excluding social sciences.
+            </p>
+            
+            <div class="grid-2">
+                <div>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🎯 Primary Objective</h3>
+                    <p>Alleviate the academic burden, allowing students ample free time in their formative years to fully enjoy life and promote healthy growth, both physically and mentally.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">⚠️ Common Challenges</h3>
+                    <ul class="styled-list">
+                        <li>Overwhelming number of subjects</li>
+                        <li>Insufficient explanation of concepts</li>
+                        <li>Lack of adaptation to individual needs</li>
+                        <li>Errors in fundamental operations</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <h4>Our Solution</h4>
+                <p>Streamlining the curriculum, providing effective concept explanations, and adopting teaching strategies that accommodate diverse learning styles. 
+                By doing so, we enhance students' engagement, nurture their interest in studies, and allow them the freedom to enjoy a well-rounded childhood for overall well-being.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials & Why Cambridge -->
+    <section style="background: white;">
+        <h2 class="section-title">Materials & Curriculum</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>📚 Materials Needed</h3>
+                <p>The fundamentals of mathematics remain consistent worldwide up to the 12th grade.</p>
+                <ul class="styled-list" style="margin-top: 1rem;">
+                    <li><strong>Grades up to 10th:</strong> IGCSE and O Level books</li>
+                    <li><strong>Grades 11th-12th:</strong> IAS/IAL/AS/A Level books</li>
+                    <li>All aligned with Cambridge board</li>
+                    <li>Soft copies provided by tutor</li>
+                    <li>Daily practical examples included</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🌟 Why Cambridge Board?</h3>
+                <ul class="styled-list">
+                    <li>Meticulously crafted textbooks</li>
+                    <li>Daily practical examples for effective learning</li>
+                    <li>Well-structured problem-solving opportunities</li>
+                    <li>Beyond rote memorization</li>
+                    <li>Underlying concepts elucidated</li>
+                    <li>Practical application to engineering problems</li>
+                    <li>Future-ready topics (next 3-4 years)</li>
+                    <li>Globally recognized certification</li>
+                    <li>A*/A+/A grades open doors to MIT, Stanford, NUS, Cambridge</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prerequisites -->
+    <section>
+        <h2 class="section-title">Prerequisites</h2>
+        <div class="grid-3">
+            <div class="feature-box">
+                <div class="feature-icon">🇬🇧</div>
+                <h3>English Proficiency</h3>
+                <p>Students must know how to read, write, and understand English</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔢</div>
+                <h3>Mathematical Tables</h3>
+                <p>Students should be good at multiplication tables</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">💡</div>
+                <h3>Eagerness to Learn</h3>
+                <p>Strong motivation and willingness to excel</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Syllabus -->
+    <section style="background: white;" id="syllabus">
+        <h2 class="section-title">Comprehensive Syllabus</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #666;">This syllabus is covered if the student does not have a specific syllabus requirement</p>
+        
+        <div class="syllabus-container">
+            <div class="syllabus-item">
+                <h3>1. Integers & Number Systems</h3>
+                <ul>
+                    <li>The ordinary process of number manipulation</li>
+                    <li>Prime Numbers, factors, Multiples</li>
+                    <li>Indices, Powers and Roots</li>
+                    <li>Simple manipulation of Surds</li>
+                    <li>Rationalising the denominator</li>
+                    <li>Natural Numbers, Integers, rational and irrational numbers</li>
+                    <li>Weights, Measures and Money</li>
+                    <li>Fractions, Ratios, proportions, decimals and Percentages</li>
+                    <li>Expressing numbers to a given degree of accuracy</li>
+                    <li>Solve problems using upper and lower bounds where values are given to the degree of accuracy</li>
+                    <li>Numbers in standard form</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>2. Sets</h3>
+                <ul>
+                    <li>Idea of a set</li>
+                    <li>Set language and notation</li>
+                    <li>Union and Intersection of sets</li>
+                    <li>Number of elements in a set</li>
+                    <li>Complimentary set</li>
+                    <li>Subsets, Universal set, Null set</li>
+                    <li>Venn diagrams and their use in simple logic problems</li>
+                    <li>Use of symbols to represent set</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>3. Algebra</h3>
+                <ul>
+                    <li>The basic process of algebra</li>
+                    <li>The construction interpretation and use of formulae and their manipulation</li>
+                    <li>The factorization of simple algebraic expressions</li>
+                    <li>Use of factor theorem</li>
+                    <li>Algebraic division of a cubic by a linear factor</li>
+                    <li>The manipulation of simple algebraic fractions (denominator: numerical, linear or quadratic)</li>
+                    <li>Solutions to equations containing 1st, 2nd or 3rd degree containing one unknown quantity</li>
+                    <li>Solutions to linear simultaneous equations in two unknown</li>
+                    <li>Solve simultaneous equation in two unknowns (one linear, one quadratic)</li>
+                    <li>Solution of linear inequalities and representation on number line and two dimensional space</li>
+                    <li>Solve quadratic inequalities in one unknown and represent solution set on number line</li>
+                    <li>The idea of a sequence</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>4. Functions</h3>
+                <ul>
+                    <li>Function, Mapping, Notations, domain and range</li>
+                    <li>Composite and inverse functions</li>
+                    <li>Direct and indirect proportion</li>
+                    <li>Rectangular cartesian coordinate system</li>
+                    <li>Differentiation of integer powers</li>
+                    <li>Determinant of gradients, rate of change</li>
+                    <li>Maxima, minima and turning points</li>
+                    <li>Recognise, plot and draw graphs with cubic equation</li>
+                    <li>Calculate gradient of straight line given coordinates of two points</li>
+                    <li>Find equation of straight line parallel/perpendicular to given line</li>
+                    <li>Sin, cos, tan for angles of any size (in degrees)</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>5. Matrices</h3>
+                <ul>
+                    <li>Representation of data by a matrix</li>
+                    <li>Addition and multiplication of Matrices</li>
+                    <li>Multiplication by scalar</li>
+                    <li>Unit matrix and Null matrix</li>
+                    <li>Determinants and inverse of non-singular 2x2 matrices</li>
+                    <li>Transformation of the plane associated with 2x2 matrices</li>
+                    <li>Combination of transformation</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>6. Geometry</h3>
+                <ul>
+                    <li>Geometrical reasoning</li>
+                    <li>Angle properties of parallel lines, triangles and polygons (including regular polygons)</li>
+                    <li>Properties of parallelogram, rectangle, square, rhombus, trapezium and kite</li>
+                    <li>Symmetry about a point, line or plane</li>
+                    <li>Use Pythagoras theorem in 2D and 3D</li>
+                    <li>Similarity, area and volume in similar figures</li>
+                    <li>Congruent figures (SSS, SAS, ASA)</li>
+                    <li>Chord angle and tangent properties of a circle</li>
+                    <li>Properties of cyclic quadrilateral</li>
+                    <li>Loci in two dimensions</li>
+                    <li>Construction of bisection in angle and length</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>7. Mensuration</h3>
+                <ul>
+                    <li>Length, area and volume</li>
+                    <li>Mensuration of two dimensional shapes: rectangle, parallelogram, trapezium, triangle and circle</li>
+                    <li>Mensuration of three dimensional: right circular cylinder, right circular cone, sphere, cuboid, pyramid and prism</li>
+                    <li>Length of arc, areas of sector of a circle</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>8. Vectors and Transformation Geometry</h3>
+                <ul>
+                    <li>Scalar and vector quantities</li>
+                    <li>Understand and use of vector notation</li>
+                    <li>Representation of vector by directed line segment</li>
+                    <li>Parallel vectors, unit vectors and position vectors</li>
+                    <li>Sum and difference of two vectors</li>
+                    <li>Modulus of a vector</li>
+                    <li>Multiplication of vector by a scalar</li>
+                    <li>Find the resultant of two or more vectors</li>
+                    <li>Transformation of plane</li>
+                    <li>Combination of transformations</li>
+                    <li>Multiplication of a vector by a matrix</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>9. Trigonometry</h3>
+                <ul>
+                    <li>Use of sine, cosine and tangent of angles up to 180 degrees</li>
+                    <li>Solution of problems in two and three dimensions by calculating and drawing</li>
+                    <li>Angle of elevation and depression</li>
+                    <li>Bearings</li>
+                </ul>
+            </div>
+
+            <div class="syllabus-item">
+                <h3>10. Statistics and Probability</h3>
+                <ul>
+                    <li>Graphical representation of numerical data</li>
+                    <li>Determination of mean, median and mode of discrete data</li>
+                    <li>Calculation of estimate of mean of large number of quantities given in grouped frequencies</li>
+                    <li>Determination of modal class and class containing median for grouped data</li>
+                    <li>Understanding language and basic concepts of probability</li>
+                    <li>Use of addition rule for two or more mutually exclusive events</li>
+                    <li>Use of product rule for two or more independent events</li>
+                    <li>Determination of probability of two or more independent events</li>
+                    <li>Use simple conditional probability for combined events</li>
+                    <li>Finding very simple conditional probability</li>
+                    <li>Understanding and use the term 'expected probability'</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Subjects -->
+    <section>
+        <h2 class="section-title">Other Subjects</h2>
+        <div class="card" style="text-align: center;">
+            <h3>🔬 Physics and Chemistry classes are also taken</h3>
+            <p style="margin-top: 1rem; font-size: 1.1rem;">Comprehensive science education for complete academic preparation</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Get Started Today</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.1rem;">Transform your child's mathematical journey with expert guidance</p>
+        
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>📞 Contact</h3>
+                <p style="font-size: 1.5rem; font-weight: bold;">+91 81241 85476</p>
+                <p>Dr. Abbas Ahmed Syed Khaja</p>
+            </div>
+            <div class="contact-item">
+                <h3>💬 WhatsApp</h3>
+                <a href="https://wa.me/918124185476" style="color: #25D366; font-size: 1.2rem; text-decoration: none; font-weight: bold;">
+                    Click to Chat
+                </a>
+                <p>Quick response guaranteed</p>
+            </div>
+            <div class="contact-item">
+                <h3>⏰ Class Schedule</h3>
+                <p>5 Days a Week</p>
+                <p>1 Hour per Session</p>
+                <p>8 Month Course</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Math Tutoring Classes by Dr. Abbas Ahmed Syed Khaja</p>
+        <p>Ph.D (IIT Madras) | 18+ Years Experience | IIT Madras Alumnus</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">WhatsApp: +91 81241 85476</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2026 All Rights Reserved. Empowering students for global success.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
